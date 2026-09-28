@@ -1,0 +1,423 @@
+[
+  {
+    "id": "cat_electronics",
+    "link": "cat_electronics",
+    "title": {
+      "en-US": "Electronics & Computers",
+      "sr-Latn-RS": "Elektronika i Računari",
+      "th-TH": "อิเล็กทรอนิกส์และคอมพิวเตอร์"
+    },
+    "sub": [
+      {
+        "id": "sub_elec_phones",
+        "link": "sub_elec_phones",
+        "title": {
+          "en-US": "Smartphones & Accessories",
+          "sr-Latn-RS": "Mobilni telefoni i Oprema",
+          "th-TH": "สมาร์ทโฟนและอุปกรณ์เสริม"
+        }
+      },
+      {
+        "id": "sub_elec_computers",
+        "link": "sub_elec_computers",
+        "title": {
+          "en-US": "Computers & Laptops",
+          "sr-Latn-RS": "Računari i Laptopovi",
+          "th-TH": "คอมพิวเตอร์และแล็ปท็อป"
+        }
+      },
+      {
+        "id": "sub_elec_gaming",
+        "link": "sub_elec_gaming",
+        "title": {
+          "en-US": "Video Games & Consoles",
+          "sr-Latn-RS": "Video Igre i Konzole",
+          "th-TH": "วิดีโอเกมและคอนโซล"
+        }
+      },
+      {
+        "id": "sub_elec_audio",
+        "link": "sub_elec_audio",
+        "title": {
+          "en-US": "Audio & Headphones",
+          "sr-Latn-RS": "Audio oprema i Slušalice",
+          "th-TH": "เครื่องเสียงและหูฟัง"
+        }
+      },
+      {
+        "id": "sub_elec_other",
+        "link": "sub_elec_other",
+        "title": {
+          "en-US": "Other Electronics",
+          "sr-Latn-RS": "Ostala Elektronika",
+          "th-TH": "อิเล็กทรอนิกส์อื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_fashion",
+    "link": "cat_fashion",
+    "title": {
+      "en-US": "Fashion & Apparel",
+      "sr-Latn-RS": "Moda i Odeća",
+      "th-TH": "แฟชั่นและเครื่องแต่งกาย"
+    },
+    "sub": [
+      {
+        "id": "sub_fash_mens",
+        "link": "sub_fash_mens",
+        "title": {
+          "en-US": "Men's Clothing",
+          "sr-Latn-RS": "Muška Odeća",
+          "th-TH": "เสื้อผ้าผู้ชาย"
+        }
+      },
+      {
+        "id": "sub_fash_womens",
+        "link": "sub_fash_womens",
+        "title": {
+          "en-US": "Women's Clothing",
+          "sr-Latn-RS": "Ženska Odeća",
+          "th-TH": "เสื้อผ้าผู้หญิง"
+        }
+      },
+      {
+        "id": "sub_fash_shoes",
+        "link": "sub_fash_shoes",
+        "title": {
+          "en-US": "Shoes & Sneakers",
+          "sr-Latn-RS": "Obuća i Patike",
+          "th-TH": "รองเท้าและสนีกเกอร์"
+        }
+      },
+      {
+        "id": "sub_fash_accessories",
+        "link": "sub_fash_accessories",
+        "title": {
+          "en-US": "Bags, Watches & Accessories",
+          "sr-Latn-RS": "Torbe, Satovi i Dodaci",
+          "th-TH": "กระเป๋า นาฬิกา และเครื่องประดับ"
+        }
+      },
+      {
+        "id": "sub_fash_other",
+        "link": "sub_fash_other",
+        "title": {
+          "en-US": "Other Fashion",
+          "sr-Latn-RS": "Ostala Moda",
+          "th-TH": "แฟชั่นอื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_home",
+    "link": "cat_home",
+    "title": {
+      "en-US": "Home & Garden",
+      "sr-Latn-RS": "Kuća i Bašta",
+      "th-TH": "บ้านและสวน"
+    },
+    "sub": [
+      {
+        "id": "sub_home_decor",
+        "link": "sub_home_decor",
+        "title": {
+          "en-US": "Home Decor & Furniture",
+          "sr-Latn-RS": "Dekoracija i Nameštaj",
+          "th-TH": "ของตกแต่งบ้านและเฟอร์นิเจอร์"
+        }
+      },
+      {
+        "id": "sub_home_kitchen",
+        "link": "sub_home_kitchen",
+        "title": {
+          "en-US": "Kitchen & Dining",
+          "sr-Latn-RS": "Kuhinja i Trpezarija",
+          "th-TH": "ห้องครัวและห้องอาหาร"
+        }
+      },
+      {
+        "id": "sub_home_tools",
+        "link": "sub_home_tools",
+        "title": {
+          "en-US": "Tools & Home Improvement",
+          "sr-Latn-RS": "Alati i Uređenje Doma",
+          "th-TH": "เครื่องมือและปรับปรุงบ้าน"
+        }
+      },
+      {
+        "id": "sub_home_outdoor",
+        "link": "sub_home_outdoor",
+        "title": {
+          "en-US": "Garden & Outdoor",
+          "sr-Latn-RS": "Bašta i Dvorište",
+          "th-TH": "สวนและกิจกรรมกลางแจ้ง"
+        }
+      },
+      {
+        "id": "sub_home_other",
+        "link": "sub_home_other",
+        "title": {
+          "en-US": "Other Home Goods",
+          "sr-Latn-RS": "Ostale Kućne Potrepštine",
+          "th-TH": "ของใช้ในบ้านอื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_health_beauty",
+    "link": "cat_health_beauty",
+    "title": {
+      "en-US": "Health & Beauty",
+      "sr-Latn-RS": "Zdravlje i Lepota",
+      "th-TH": "สุขภาพและความงาม"
+    },
+    "sub": [
+      {
+        "id": "sub_hb_skincare",
+        "link": "sub_hb_skincare",
+        "title": {
+          "en-US": "Skincare & Makeup",
+          "sr-Latn-RS": "Nega Kože i Šminka",
+          "th-TH": "ผลิตภัณฑ์ดูแลผิวและเครื่องสำอาง"
+        }
+      },
+      {
+        "id": "sub_hb_personal",
+        "link": "sub_hb_personal",
+        "title": {
+          "en-US": "Personal Care & Grooming",
+          "sr-Latn-RS": "Lična Higijena i Nega",
+          "th-TH": "ผลิตภัณฑ์ดูแลส่วนบุคคล"
+        }
+      },
+      {
+        "id": "sub_hb_supplements",
+        "link": "sub_hb_supplements",
+        "title": {
+          "en-US": "Vitamins & Supplements",
+          "sr-Latn-RS": "Vitamini i Suplementi",
+          "th-TH": "วิตามินและอาหารเสริม"
+        }
+      },
+      {
+        "id": "sub_hb_fragrances",
+        "link": "sub_hb_fragrances",
+        "title": {
+          "en-US": "Fragrances & Perfumes",
+          "sr-Latn-RS": "Mirisi i Parfemi",
+          "th-TH": "น้ำหอม"
+        }
+      },
+      {
+        "id": "sub_hb_other",
+        "link": "sub_hb_other",
+        "title": {
+          "en-US": "Other Health & Beauty",
+          "sr-Latn-RS": "Ostalo Zdravlje i Lepota",
+          "th-TH": "สุขภาพและความงามอื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_sports",
+    "link": "cat_sports",
+    "title": {
+      "en-US": "Sports & Outdoors",
+      "sr-Latn-RS": "Sport i Oprema",
+      "th-TH": "กีฬาและกิจกรรมกลางแจ้ง"
+    },
+    "sub": [
+      {
+        "id": "sub_sport_fitness",
+        "link": "sub_sport_fitness",
+        "title": {
+          "en-US": "Fitness & Gym Equipment",
+          "sr-Latn-RS": "Fitnes i Teretana",
+          "th-TH": "อุปกรณ์ฟิตเนสและยิม"
+        }
+      },
+      {
+        "id": "sub_sport_cycling",
+        "link": "sub_sport_cycling",
+        "title": {
+          "en-US": "Cycling & Scooters",
+          "sr-Latn-RS": "Biciklizam i Trotineti",
+          "th-TH": "จักรยานและสกู๊ตเตอร์"
+        }
+      },
+      {
+        "id": "sub_sport_camping",
+        "link": "sub_sport_camping",
+        "title": {
+          "en-US": "Camping & Hiking",
+          "sr-Latn-RS": "Kampovanje i Planinarenje",
+          "th-TH": "แคมป์ปิ้งและเดินป่า"
+        }
+      },
+      {
+        "id": "sub_sport_other",
+        "link": "sub_sport_other",
+        "title": {
+          "en-US": "Other Sports Equipment",
+          "sr-Latn-RS": "Ostala Sportska Oprema",
+          "th-TH": "อุปกรณ์กีฬาอื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_auto",
+    "link": "cat_auto",
+    "title": {
+      "en-US": "Automotive & Motorcycles",
+      "sr-Latn-RS": "Automobili i Motocikli",
+      "th-TH": "ยานยนต์และรถจักรยานยนต์"
+    },
+    "sub": [
+      {
+        "id": "sub_auto_car",
+        "link": "sub_auto_car",
+        "title": {
+          "en-US": "Car Parts & Accessories",
+          "sr-Latn-RS": "Auto Delovi i Oprema",
+          "th-TH": "อะไหล่รถยนต์และอุปกรณ์เสริม"
+        }
+      },
+      {
+        "id": "sub_auto_moto",
+        "link": "sub_auto_moto",
+        "title": {
+          "en-US": "Motorcycle Parts & Accessories",
+          "sr-Latn-RS": "Moto Delovi i Oprema",
+          "th-TH": "อะไหล่รถจักรยานยนต์และอุปกรณ์เสริม"
+        }
+      },
+      {
+        "id": "sub_auto_tools",
+        "link": "sub_auto_tools",
+        "title": {
+          "en-US": "Automotive Tools & Care",
+          "sr-Latn-RS": "Auto Alati i Kozmetika",
+          "th-TH": "เครื่องมือและการดูแลรักษารถยนต์"
+        }
+      },
+      {
+        "id": "sub_auto_other",
+        "link": "sub_auto_other",
+        "title": {
+          "en-US": "Other Automotive",
+          "sr-Latn-RS": "Ostala Auto-moto Oprema",
+          "th-TH": "ยานยนต์อื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_digital",
+    "link": "cat_digital",
+    "title": {
+      "en-US": "Digital Goods & Services",
+      "sr-Latn-RS": "Digitalna Roba i Servisi",
+      "th-TH": "สินค้าและบริการดิจิทัล"
+    },
+    "sub": [
+      {
+        "id": "sub_dig_software",
+        "link": "sub_dig_software",
+        "title": {
+          "en-US": "Software & OS Keys",
+          "sr-Latn-RS": "Softver i OS Ključevi",
+          "th-TH": "ซอฟต์แวร์และคีย์ระบบปฏิบัติการ"
+        }
+      },
+      {
+        "id": "sub_dig_gaming",
+        "link": "sub_dig_gaming",
+        "title": {
+          "en-US": "Game Keys & Top-ups",
+          "sr-Latn-RS": "Igre i Dopune",
+          "th-TH": "คีย์เกมและบัตรเติมเงิน"
+        }
+      },
+      {
+        "id": "sub_dig_giftcards",
+        "link": "sub_dig_giftcards",
+        "title": {
+          "en-US": "Gift Cards & Vouchers",
+          "sr-Latn-RS": "Poklon Kartice i Vaučeri",
+          "th-TH": "บัตรของขวัญและบัตรกำนัล"
+        }
+      },
+      {
+        "id": "sub_dig_services",
+        "link": "sub_dig_services",
+        "title": {
+          "en-US": "Digital Services & Subscriptions",
+          "sr-Latn-RS": "Digitalni Servisi i Pretplata",
+          "th-TH": "บริการดิจิทัลและการสมัครสมาชิก"
+        }
+      },
+      {
+        "id": "sub_dig_other",
+        "link": "sub_dig_other",
+        "title": {
+          "en-US": "Other Digital Goods",
+          "sr-Latn-RS": "Ostala Digitalna Roba",
+          "th-TH": "สินค้าดิจิทัลอื่นๆ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cat_misc",
+    "link": "cat_misc",
+    "title": {
+      "en-US": "Miscellaneous",
+      "sr-Latn-RS": "Razno",
+      "th-TH": "เบ็ดเตล็ด"
+    },
+    "sub": [
+      {
+        "id": "sub_misc_toys",
+        "link": "sub_misc_toys",
+        "title": {
+          "en-US": "Toys, Kids & Baby",
+          "sr-Latn-RS": "Igračke, Deca i Bebe",
+          "th-TH": "ของเล่น เด็ก และทารก"
+        }
+      },
+      {
+        "id": "sub_misc_pets",
+        "link": "sub_misc_pets",
+        "title": {
+          "en-US": "Pet Supplies",
+          "sr-Latn-RS": "Oprema za Kućne Ljubimce",
+          "th-TH": "อุปกรณ์สำหรับสัตว์เลี้ยง"
+        }
+      },
+      {
+        "id": "sub_misc_books",
+        "link": "sub_misc_books",
+        "title": {
+          "en-US": "Books & Stationery",
+          "sr-Latn-RS": "Knjige i Kancelarijski Materijal",
+          "th-TH": "หนังสือและเครื่องเขียน"
+        }
+      },
+      {
+        "id": "sub_misc_other",
+        "link": "sub_misc_other",
+        "title": {
+          "en-US": "Everything Else",
+          "sr-Latn-RS": "Sve Ostalo",
+          "th-TH": "อื่นๆ"
+        }
+      }
+    ]
+  }
+]

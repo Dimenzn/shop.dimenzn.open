@@ -1,0 +1,243 @@
+# 🧪 TEST ENVIRONMENT (test.dimenzn.com)
+server {
+    server_name test.dimenzn.com;
+
+    # 🌟 1A. THE PRODUCT BOT TRAP (Test - Port 4999)
+    location ~ ^/product/(.*)$ {
+        set $is_bot 0;
+
+        # Check if the visitor is a social media bot
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber") {
+            set $is_bot 1;
+        }
+
+        # If it IS a bot, secretly rewrite the URL and pass it to the Test Backend
+        if ($is_bot = 1) {
+            rewrite ^/product/(.*)$ /api/open/bot-preview/product/$1 break;
+            proxy_pass http://localhost:4999;
+        }
+
+        # If it is a HUMAN, ignore the backend and serve the fast Vue SPA
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 🌟 1B. THE SELLER BOT TRAP (Test - Port 4999)
+    location ~ ^/seller/(.*)$ {
+        set $is_bot 0;
+
+        # Check if the visitor is a social media bot
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber") {
+            set $is_bot 1;
+        }
+
+        # If it IS a bot, secretly rewrite the URL and pass it to the Test Backend
+        if ($is_bot = 1) {
+            rewrite ^/seller/(.*)$ /api/open/bot-preview/seller/$1 break;
+            proxy_pass http://localhost:4999;
+        }
+
+        # If it is a HUMAN, ignore the backend and serve the fast Vue SPA
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 2. Frontend Route -> Static SPA
+    location / {
+        root /var/www/dimenzn/dist/spa;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 3. Backend - Proxy API requests to Port 4999
+    location /api {
+        proxy_pass http://localhost:4999;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+   # listen 443 ssl; # managed by Certbot
+   # ssl_certificate /etc/letsencrypt/live/test.dimenzn.com/fullchain.pem; # managed by Certbot
+   # ssl_certificate_key /etc/letsencrypt/live/test.dimenzn.com/privkey.pem; # managed by Certbot
+   # include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+   # ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/test.dimenzn.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/test.dimenzn.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+ 
+# 🇷🇸 SERBIA MARKET (rs.dimenzn.com)
+server {
+    server_name rs.dimenzn.com;
+
+    # 🌟 1A. THE PRODUCT BOT TRAP (RS - Port 5000)
+    location ~ ^/product/(.*)$ {
+        set $is_bot 0;
+        
+        # Check if the visitor is a social media bot
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber") {
+            set $is_bot 1;
+        }
+
+        if ($is_bot = 1) {
+            rewrite ^/product/(.*)$ /api/open/bot-preview/product/$1 break;
+            proxy_pass http://localhost:5000;
+        }
+
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 🌟 1B. THE SELLER BOT TRAP (RS - Port 5000)
+    location ~ ^/seller/(.*)$ {
+        set $is_bot 0;
+        
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber") {
+            set $is_bot 1;
+        }
+
+        if ($is_bot = 1) {
+            rewrite ^/seller/(.*)$ /api/open/bot-preview/seller/$1 break;
+            proxy_pass http://localhost:5000;
+        }
+
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 2. Frontend Route -> Static SPA
+    location / {
+        root /var/www/dimenzn/dist/spa;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }    
+
+    # 3. Backend - Proxy API requests to Port 5000
+    location /api {
+        proxy_pass http://localhost:5000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/rs.dimenzn.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/rs.dimenzn.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+# 🇹🇭 THAILAND MARKET (th.dimenzn.com)
+server {
+    server_name th.dimenzn.com;
+
+    # 🌟 1A. THE PRODUCT BOT TRAP (TH - Port 5001)
+    location ~ ^/product/(.*)$ {
+        set $is_bot 0;
+        
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber|line/|linespider") {
+            set $is_bot 1;
+        }
+
+        if ($is_bot = 1) {
+            rewrite ^/product/(.*)$ /api/open/bot-preview/product/$1 break;
+            proxy_pass http://localhost:5001;
+        }
+
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 🌟 1B. THE SELLER BOT TRAP (TH - Port 5001)
+    location ~ ^/seller/(.*)$ {
+        set $is_bot 0;
+        
+        if ($http_user_agent ~* "facebookexternalhit|twitterbot|whatsapp|telegrambot|linkedinbot|skypeuripreview|discordbot|googlebot|bingbot|viber") {
+            set $is_bot 1;
+        }
+
+        if ($is_bot = 1) {
+            rewrite ^/seller/(.*)$ /api/open/bot-preview/seller/$1 break;
+            proxy_pass http://localhost:5001;
+        }
+
+        root /var/www/dimenzn/dist/spa;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 2. Frontend Route -> Static SPA
+    location / {
+        root /var/www/dimenzn/dist/spa;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 3. Backend - Proxy API requests to Port 5001
+    location /api {
+        proxy_pass http://localhost:5001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/th.dimenzn.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/th.dimenzn.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+# HTTP to HTTPS REDIRECTS
+server {
+    if ($host = test.dimenzn.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name test.dimenzn.com;
+    return 404; # managed by Certbot
+}
+
+server {
+    if ($host = rs.dimenzn.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name rs.dimenzn.com;
+    return 404; # managed by Certbot
+}
+
+server {
+    if ($host = th.dimenzn.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name th.dimenzn.com;
+    return 404; # managed by Certbot
+}
+
+server {
+    if ($host = test.dimenzn.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    server_name test.dimenzn.com;
+
+   listen 80;
+    return 404; # managed by Certbot
+
+
+}
